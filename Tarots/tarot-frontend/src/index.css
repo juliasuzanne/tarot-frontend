@@ -9,16 +9,43 @@ html {
 
 }
 
+
+
+h3{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+button {
+  background-image: url("./images/cardback.png");
+  background-size: cover;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+  color: rgb(36, 23, 1);
+  border-radius: 10px;
+}
+
+.cardy{
+  background-color: rgba(128, 128, 128, 0.402);
+  height: 100vh;
+  width: 100vw;
+}
+
 .label{
   display: flex;
   justify-content: center;
 }
 
+#symbol{
+padding: 0px;
+justify-content: center;
+position: relative;
+width: 100%;
+
+}
+
 #card{
   width: 150px;
   height: 200px;
-  padding: 50px;
-  padding-left: 50px;
   z-index: 1;
 
 }
