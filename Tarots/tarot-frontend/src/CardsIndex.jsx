@@ -10,12 +10,12 @@ export function CardsIndex() {
 
   let [card3, setCard3] = useState(true);
 
-  let [cardnum1, setCardNum1] = useState(1);
-  let [randomCard1, setRandomCard1] = useState(1);
-  let [cardnum2, setCardNum2] = useState(2);
-  let [randomCard2, setRandomCard2] = useState(2);
-  let [cardnum3, setCardNum3] = useState(3);
-  let [randomCard3, setRandomCard3] = useState(3);
+  let [cardnum1, setCardNum1] = useState(Math.ceil(Math.random() * 78));
+  let [randomCard1, setRandomCard1] = useState(Math.ceil(Math.random() * 78));
+  let [cardnum2, setCardNum2] = useState(Math.ceil(Math.random() * 78));
+  let [randomCard2, setRandomCard2] = useState(Math.ceil(Math.random() * 78));
+  let [cardnum3, setCardNum3] = useState(Math.ceil(Math.random() * 78));
+  let [randomCard3, setRandomCard3] = useState(Math.ceil(Math.random() * 78));
 
   const handleCards = () => {
     axios
@@ -92,13 +92,15 @@ export function CardsIndex() {
       .catch(function (error) {
         console.log(error);
       });
-
     setCard3(false);
   };
 
   return (
     <div>
       <div className="layout">
+        <div className="label">
+          <h3> Present</h3>
+        </div>
         <div className="card">
           <button
             id="card"
@@ -111,6 +113,10 @@ export function CardsIndex() {
             {" "}
             {randomCard1.name}
           </button>
+        </div>
+        <div className="label">
+          <h3>Past &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3>
+          <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Future</h3>
         </div>
         <div className="card">
           <button
