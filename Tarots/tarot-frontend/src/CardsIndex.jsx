@@ -112,65 +112,73 @@ export function CardsIndex() {
         <div className="label">
           <h3> Present</h3>
         </div>
-        <div className="card">
-          <button
-            id="card"
-            onClick={() => {
-              if (card1) {
-                handleGenerateNumber1();
-              } else {
-                // setCurrentImage("/images/8.png");
-                handleShowImage();
-                setTitle("Present");
-                setCurrentCard(randomCard1.name);
-                setTextDescription(randomCard1.description);
-              }
-            }}
-          >
-            <img id="symbol" src={randomCard1.image} />
-          </button>
+        <div id="pad1">
+          <div className="card">
+            <button
+              id="card"
+              onClick={() => {
+                if (card1) {
+                  handleGenerateNumber1();
+                } else {
+                  // setCurrentImage("/images/8.png");
+                  handleShowImage();
+                  setTitle("Present");
+                  setCurrentCard(randomCard1.name);
+                  setTextDescription(randomCard1.description);
+                }
+              }}
+            >
+              <img id="symbol" src={randomCard1.image} />
+            </button>
+          </div>
         </div>
-        <div className="label">
-          <h3>Past &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3>
-          <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Future</h3>
-        </div>
-        <div className="card">
-          <button
-            id="card"
-            onClick={() => {
-              if (card2) {
-                handleGenerateNumber2();
-              } else {
-                // setCurrentImage("/images/8.png");
-                handleShowImage();
-                setTitle("Past");
-                setCurrentCard(randomCard2.name);
 
-                setTextDescription(randomCard2.description);
-              }
-            }}
-          >
-            {" "}
-            <img id="symbol" src={randomCard2.image} />
-          </button>
-          <button
-            id="card"
-            onClick={() => {
-              if (card3) {
-                handleGenerateNumber3();
-              } else {
-                // setCurrentImage("/images/8.png");
-                handleShowImage();
-                setTitle("Future");
-                setCurrentCard(randomCard3.name);
-                setTextDescription(randomCard3.description);
-              }
-            }}
-          >
-            {" "}
-            <img id="symbol" src={randomCard3.image} />
-          </button>
+        <div className="card">
+          <div id="pad2">
+            <button
+              id="card"
+              onClick={() => {
+                if (card2) {
+                  handleGenerateNumber2();
+                } else {
+                  // setCurrentImage("/images/8.png");
+                  handleShowImage();
+                  setTitle("Past");
+                  setCurrentCard(randomCard2.name);
+
+                  setTextDescription(randomCard2.description);
+                }
+              }}
+            >
+              {" "}
+              <img id="symbol" src={randomCard2.image} />
+            </button>
+          </div>
+
+          <div id="pad3">
+            <button
+              id="card"
+              onClick={() => {
+                if (card3) {
+                  handleGenerateNumber3();
+                } else {
+                  // setCurrentImage("/images/8.png");
+                  handleShowImage();
+                  setTitle("Future");
+                  setCurrentCard(randomCard3.name);
+                  setTextDescription(randomCard3.description);
+                }
+              }}
+            >
+              {" "}
+              <img id="symbol" src={randomCard3.image} />
+            </button>
+          </div>
         </div>
+      </div>
+      <div className="label">
+        <h3>Past &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</h3>
+        <h3> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Future</h3>
       </div>
       <Modal show={showImage} onClose={handleHideImage}>
         {/* <img id="modalImage" src={currentImage} /> */}

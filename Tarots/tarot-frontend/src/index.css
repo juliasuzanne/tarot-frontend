@@ -12,7 +12,12 @@ html {
 
 
 h3{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family:'Courier New', Courier, monospace;
+}
+
+p{
+  font-family: monospace;
+
 }
 
 button {
@@ -40,12 +45,27 @@ padding: 0px;
 justify-content: center;
 position: relative;
 width: 100%;
+filter: invert(0.8);
 
+}
+
+#pad1{
+  padding: 20px;
+  transform: rotate(-0.01turn);
+}
+
+#pad2{
+  padding: 12px;
+  transform: rotate(0.005turn);
+}
+
+#pad3{
+  padding: 8px;
 }
 
 #card{
   width: 150px;
-  height: 200px;
+  height: 250px;
   z-index: 1;
 
 }
